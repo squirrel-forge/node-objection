@@ -1,0 +1,26 @@
+{
+  "name": "@squirrel-forge/node-objection",
+  "version": "1.0.0",
+  "description": "Advanced plain object handling, manipulation and extraction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squirrel-forge/node-objection.git"
+  },
+  "keywords": [
+    "node",
+    "object",
+    "pojo",
+    "manipulation",
+    "extraction"
+  ],
+  "author": "Daniel Hartwell <me@siux.info> (http://siux.info)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/squirrel-forge/node-objection/issues"
+  },
+  "homepage": "https://github.com/squirrel-forge/node-objection#readme"
+}
