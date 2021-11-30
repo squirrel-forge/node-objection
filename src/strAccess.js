@@ -1,17 +1,12 @@
-/* global module */
-'use strict';
-
 /**
  * Access object value by dot syntax string
- *
- * @param {String} strpath - Dotted value path
+ * @param {string} strpath - Dotted value path
  * @param {Object} subject - Object to access
- * @param {Boolean} exact - Whether to match only an exact value, default: true
+ * @param {boolean} exact - Whether to match only an exact value, default: true
  * @param {Object} debug - Debugger instance
- *
  * @return {null|*} - Closest value matched to path, or in exact mode, null is returned for no match
  */
-function strAccess( strpath, subject, exact = true, debug = console ) {
+module.exports = function strAccess( strpath, subject, exact = true, debug = console ) {
 
     if ( typeof subject !== 'object' || subject === null ) {
         if ( debug ) {
@@ -69,10 +64,4 @@ function strAccess( strpath, subject, exact = true, debug = console ) {
             return value;
         }
     }
-}
-
-/**
- * Export
- * @type {function(String, Object, Boolean=, Object=): (null|*)}
- */
-module.exports = strAccess;
+};

@@ -1,6 +1,3 @@
-/* global require, module */
-'use strict';
-
 /**
  * Requires
  */
@@ -10,17 +7,15 @@ const isPojo = require( './isPojo' );
 
 /**
  * Merge objects
- *
- * @param {object} target - Base object
- * @param {object} changes - Changes object
+ * @param {Object} target - Base object
+ * @param {Object} changes - Changes object
  * @param {boolean} extend - Extend the base object
  * @param {boolean} recursive - Recursivly merge
  * @param {boolean} arrayClone - Clone array values
  * @param {boolean} noArray - Do not merge arrays
- *
- * @return {object} - Target object
+ * @return {Object} - Target object
  */
-function mergeObject( target, changes, extend, recursive, arrayClone, noArray ) {
+module.exports = function mergeObject( target, changes, extend, recursive, arrayClone, noArray ) {
     extend = !!extend;
     recursive = !!recursive;
     arrayClone = !!arrayClone;
@@ -80,10 +75,4 @@ function mergeObject( target, changes, extend, recursive, arrayClone, noArray ) 
         }
     }
     return target;
-}
-
-/**
- * Export
- * @type {function(Object, Object, boolean, boolean, boolean, boolean): Object}
- */
-module.exports = mergeObject;
+};

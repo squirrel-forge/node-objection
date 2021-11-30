@@ -1,6 +1,3 @@
-/* global require, module */
-'use strict';
-
 /**
  * Requires
  */
@@ -8,13 +5,11 @@ const isPojo = require( './isPojo' );
 
 /**
  * Clone object or array
- *
  * @param {Object|Array} source - Source to clone
  * @param {boolean} recursive - Recursive mode
- *
  * @returns {Object|Array} - Cloned object
  */
-function cloneObject( source, recursive = false ) {
+module.exports = function cloneObject( source, recursive = false ) {
     recursive = !!recursive;
     const is_array = source instanceof Array;
     const is_plain = isPojo( source );
@@ -33,10 +28,4 @@ function cloneObject( source, recursive = false ) {
         return cloned;
     }
     return source;
-}
-
-/**
- * Export
- * @type {function((Object|Array), boolean): (Object|Array)}
- */
-module.exports = cloneObject;
+};

@@ -1,6 +1,6 @@
 {
   "name": "@squirrel-forge/node-objection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Advanced plain object handling, manipulation and extraction",
   "main": "index.js",
   "scripts": {
